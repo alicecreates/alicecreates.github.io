@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Books by [Your Name]" />
+  <title>Books — [Your Name]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    .book-detail {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: start;
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .book-detail:last-child { border-bottom: none; }
+    .book-detail.reverse { direction: rtl; }
+    .book-detail.reverse > * { direction: ltr; }
+    .book-detail-cover {
+      width: 100%;
+      box-shadow: 6px 10px 30px var(--shadow);
+    }
+    .book-detail-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: linear-gradient(160deg, var(--blush), var(--border));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--muted);
+      box-shadow: 6px 10px 30px var(--shadow);
+    }
+    .book-detail-info .series-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dusty-rose);
+      margin-bottom: 0.75rem;
+    }
+    .book-detail-info h2 {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .book-detail-info .blurb {
+      color: var(--soft-ink);
+      font-size: 0.97rem;
+      margin-bottom: 1.75rem;
+    }
+    .buy-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .buy-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.65rem 1.2rem;
+      border: 1px solid var(--border);
+      color: var(--soft-ink);
+      transition: all 0.2s;
+    }
+    .buy-link:hover {
+      border-color: var(--dusty-rose);
+      color: var(--dusty-rose);
+    }
+    @media (max-width: 700px) {
+      .book-detail {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .book-detail.reverse { direction: ltr; }
+      .book-detail-cover-placeholder { max-width: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">[Your Name]<span>.</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/books/" class="active">Books</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="eyebrow">My work</p>
+    <h1>Books</h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- BOOK 1 -->
+    <div class="book-detail">
+      <!-- <img src="/assets/images/book1.jpg" alt="Book Title" class="book-detail-cover" /> -->
+      <div class="book-detail-cover-placeholder">Book Cover 1</div>
+      <div class="book-detail-info">
+        <p class="series-tag">Series Name · Book 1</p>
+        <h2>Your Book Title Here</h2>
+        <p class="blurb">
+          [Write your back-cover blurb here. Give readers the setup, the characters, the tension, and end
+          on a hook. Two to four paragraphs is typical. Make them feel something.]
+        </p>
+        <p class="blurb">
+          [Second paragraph of the blurb if you have one. This is where you might reveal the central
+          conflict or the stakes of the romance.]
+        </p>
+        <div class="buy-links">
+          <a href="#" class="buy-link">Amazon</a>
+          <a href="#" class="buy-link">Barnes &amp; Noble</a>
+          <a href="#" class="buy-link">Bookshop.org</a>
+          <a href="#" class="buy-link">Goodreads</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK 2 (reversed layout for visual rhythm) -->
+    <div class="book-detail reverse">
+      <div class="book-detail-cover-placeholder">Book Cover 2</div>
+      <div class="book-detail-info">
+        <p class="series-tag">Series Name · Book 2</p>
+        <h2>Another Great Title</h2>
+        <p class="blurb">
+          [Blurb for book two. You can use this alternating layout to create visual interest as
+          readers scroll down the page — cover on left, then right, then left again.]
+        </p>
+        <p class="blurb">
+          [Continue the description. Keep it punchy and evocative — readers should want to click
+          "buy" before they even finish reading.]
+        </p>
+        <div class="buy-links">
+          <a href="#" class="buy-link">Amazon</a>
+          <a href="#" class="buy-link">Barnes &amp; Noble</a>
+          <a href="#" class="buy-link">Bookshop.org</a>
+          <a href="#" class="buy-link">Goodreads</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK 3 -->
+    <div class="book-detail">
+      <div class="book-detail-cover-placeholder">Book Cover 3</div>
+      <div class="book-detail-info">
+        <p class="series-tag">Standalone</p>
+        <h2>A Standalone Novel</h2>
+        <p class="blurb">
+          [Blurb for your standalone. Standalones are great to highlight here because they don't
+          require readers to have read anything else — lower barrier to entry!]
+        </p>
+        <div class="buy-links">
+          <a href="#" class="buy-link">Amazon</a>
+          <a href="#" class="buy-link">Barnes &amp; Noble</a>
+          <a href="#" class="buy-link">Bookshop.org</a>
+          <a href="#" class="buy-link">Goodreads</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NEWSLETTER + FOOTER -->
+<section class="newsletter-strip">
+  <div class="container content-narrow">
+    <h2>Stay in the loop</h2>
+    <p>New posts, book news, and the occasional life update — straight to your inbox.</p>
+    <form class="newsletter-form" action="#" aria-label="Newsletter signup">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-name">[Your Name]</p>
+    <nav class="footer-links">
+      <a href="/">Home</a><a href="/books/">Books</a><a href="/blog/">Blog</a>
+      <a href="/about/">About</a><a href="/contact/">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Twitter">𝕏</a>
+      <a href="#" aria-label="Goodreads">GR</a>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> [Your Name]. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
