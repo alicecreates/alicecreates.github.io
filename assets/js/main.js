@@ -106,3 +106,32 @@ document.querySelectorAll('.book-cover, .book-cover-placeholder').forEach(cover 
     cover.style.transform = '';
   });
 });
+// ============================================
+// BREVO NEWSLETTER — no redirect
+// ============================================
+function subscribeToBrevo(e, form) {
+  e.preventDefault();
+  const btn = form.querySelector('button');
+  const email = form.querySelector('input[name="EMAIL"]').value;
+  if (!email) return;
+
+  btn.textContent = 'Subscribing…';
+  btn.disabled = true;
+
+  const formData = new FormData();
+  formData.append('EMAIL', email);
+  formData.append('email_address_check', '');
+  formData.append('locale', 'en');
+
+  fetch('https://aa3a7867.sibforms.com/serve/MUIFAAdb4r7BJII3JZtu8kp5LrrTSEnjbkNHLIj62GyrC4yh9KfFYygytwLblxwjfFi4goqt9huH2MBRudF_dFDN5mQwphHMkcofWQChGuGg3Car3IQwoyMmMoCJB0jpYECLzA0DJ5tZSYlfoPDte1Rmv6FhTxkRIsgkELpyin7iR5_SjhG_XnTMRnrRArI5Eh8xqfynTlfBcvST-g==', {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors'
+  }).then(() => {
+    btn.textContent = '✓ Check your inbox!';
+    form.querySelector('input[type="email"]').value = '';
+  }).catch(() => {
+    btn.textContent = '✓ Check your inbox!';
+    form.querySelector('input[type="email"]').value = '';
+  });
+}
