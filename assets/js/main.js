@@ -117,23 +117,37 @@ function subscribeToBrevo(e, form) {
   const email = form.querySelector('input[name="EMAIL"]').value;
   if (!email) return;
 
-  btn.textContent = 'Subscribing…';
+  btn.textContent = '✓ Check your inbox!';
   btn.disabled = true;
+  form.querySelector('input[type="email"]').value = '';
 
-  const formData = new FormData();
-  formData.append('EMAIL', email);
-  formData.append('email_address_check', '');
-  formData.append('locale', 'en');
+  // Submit silently in background via hidden iframe trick
+  const iframe = document.createElement('iframe');
+  iframe.name = 'brevo-iframe';
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
 
-  fetch('https://aa3a7867.sibforms.com/serve/MUIFAAdb4r7BJII3JZtu8kp5LrrTSEnjbkNHLIj62GyrC4yh9KfFYygytwLblxwjfFi4goqt9huH2MBRudF_dFDN5mQwphHMkcofWQChGuGg3Car3IQwoyMmMoCJB0jpYECLzA0DJ5tZSYlfoPDte1Rmv6FhTxkRIsgkELpyin7iR5_SjhG_XnTMRnrRArI5Eh8xqfynTlfBcvST-g==', {
-    method: 'POST',
-    body: formData,
-    mode: 'no-cors'
-  }).then(() => {
-    btn.textContent = '✓ Check your inbox!';
-    form.querySelector('input[type="email"]').value = '';
-  }).catch(() => {
-    btn.textContent = '✓ Check your inbox!';
-    form.querySelector('input[type="email"]').value = '';
-  });
+  const hiddenForm = document.createElement('form');
+  hiddenForm.method = 'POST';
+  hiddenForm.action = 'https://aa3a7867.sibforms.com/serve/MUIFAAdb4r7BJII3JZtu8kp5LrrTSEnjbkNHLIj62GyrC4yh9KfFYygytwLblxwjfFi4goqt9huH2MBRudF_dFDN5mQwphHMkcofWQChGuGg3Car3IQwoyMmMoCJB0jpYECLzA0DJ5tZSYlfoPDte1Rmv6FhTxkRIsgkELpyin7iR5_SjhG_XnTMRnrRArI5Eh8xqfynTlfBcvST-g==';
+  hiddenForm.target = 'brevo-iframe';
+  hiddenForm.style.display = 'none';
+
+  const emailInput = document.createElement('input');
+  emailInput.name = 'EMAIL';
+  emailInput.value = email;
+
+  const checkInput = document.createElement('input');
+  checkInput.name = 'email_address_check';
+  checkInput.value = '';
+
+  const localeInput = document.createElement('input');
+  localeInput.name = 'locale';
+  localeInput.value = 'en';
+
+  hiddenForm.appendChild(emailInput);
+  hiddenForm.appendChild(checkInput);
+  hiddenForm.appendChild(localeInput);
+  document.body.appendChild(hiddenForm);
+  hiddenForm.submit();
 }
