@@ -33,24 +33,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // ============================================
 // NEWSLETTER FORM (Formspree or static)
 // ============================================
-const newsletterForms = document.querySelectorAll('.newsletter-form');
-newsletterForms.forEach(form => {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const input = form.querySelector('input[type="email"]');
-    const btn   = form.querySelector('button');
-    if (!input.value) return;
-
-    btn.textContent = 'Thank you!';
-    btn.disabled = true;
-    input.value = '';
-
-    setTimeout(() => {
-      btn.textContent = 'Subscribe';
-      btn.disabled = false;
-    }, 3000);
-  });
-});
+// Newsletter forms now submit directly to Brevo
 
 // ============================================
 // CONTACT FORM
