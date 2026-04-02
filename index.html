@@ -1,13 +1,31 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="[Your Name] — [your tagline here]" />
-  <title>[Your Name]</title>
+  <meta name="description" content="Alice 诚言 — 用中文思考语言、文化与表达。写给在北美生活的你。" />
+  <title>Alice 诚言</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+  <style>
+    body, p, li, td, th, input, button, textarea {
+      font-family: "Jost", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6, blockquote {
+      font-family: "Cormorant Garamond", "LXGW WenKai", "Noto Serif SC", "STSong", serif;
+    }
+    article p, article li {
+      font-family: "Cormorant Garamond", "LXGW WenKai", "Noto Serif SC", "STSong", serif;
+      font-size: 1.2rem;
+      line-height: 1.9;
+    }
+    .eyebrow, .nav-links a, .nav-logo, .btn, .read-more, .post-month-year, .footer-links a, .footer-copy, .footer-name {
+      font-family: "Jost", "Noto Sans SC", "PingFang SC", sans-serif;
+    }
+  </style>
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
@@ -15,34 +33,32 @@
 <!-- NAV -->
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">[Your Name]<span>.</span></a>
+    <a href="/" class="nav-logo">Alice 诚言<span>.</span></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" role="list">
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="/books/">Books</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/" class="active">首页</a></li>
+      <li><a href="/blog/">文章</a></li>
+      <li><a href="/about/">关于</a></li>
+      <li><a href="/contact/">联系</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO BANNER IMAGE -->
-<!-- Replace this placeholder div with: <img src="/assets/images/banner.jpg" alt="..." class="hero-banner" /> -->
 <div class="hero-banner-placeholder">
-  [ Replace with your banner photo ]
+  [ 封面图 ]
 </div>
 
 <!-- HERO TEXT -->
 <section class="hero">
   <div class="container">
-    <p class="hero-eyebrow">Welcome</p>
-    <h1>I write stories about people<br>falling in love.</h1>
+    <p class="hero-eyebrow">写给在北美生活的你</p>
+    <h1>移民不是一个地理事件，<br>而是一个语言事件。</h1>
     <div class="hero-divider"></div>
-    <p class="hero-sub">Mostly the messy, complicated, heartfelt kind.</p>
-    <a href="/books/" class="btn btn-rose">See my books</a>
+    <p class="hero-sub">我用中文思考语言、文化与表达——那些夹在两种世界之间、说不清楚却真实存在的事。</p>
+    <a href="/blog/" class="btn btn-rose">读我的文章</a>
   </div>
 </section>
 
@@ -50,76 +66,73 @@
 <section class="about-strip">
   <div class="container about-strip-inner">
 
-    <!-- Replace with your photo: <img src="/assets/images/author-photo.jpg" alt="[Your Name]" class="about-photo" /> -->
     <div class="about-photo-placeholder">
-      [ Your photo here ]
+      [ 照片 ]
     </div>
 
     <div class="about-text">
-      <p class="eyebrow">About me</p>
-      <h2>Hi, I'm [Your Name]</h2>
+      <p class="eyebrow">关于我</p>
+      <h2>你好，我是 Alice 诚言</h2>
       <p>
-        [Write a short, warm bio here. Tell readers who you are, what you write, and maybe something personal
-        that makes you human. A couple of sentences is plenty — you can link to the full About page below.]
+        我在杭州长大，在纽约读书，现在住在加拿大。八年制片人和编剧的工作教会我如何讲故事；在北美生活的这些年，让我开始思考语言本身——它如何决定我们能不能被这个地方真正接纳。
       </p>
       <p>
-        [Maybe mention where you're based, what inspires your writing, or a fun fact. Keep it conversational.]
+        我写文化观察、语言分析、以及那些只有在两种世界之间生活过的人才会懂的事。
       </p>
       <br>
-      <a href="/about/" class="btn">More about me</a>
+      <a href="/about/" class="btn">更多关于我</a>
     </div>
 
   </div>
 </section>
 
-<!-- FEATURED BOOKS -->
+<!-- SERIES / COLLECTIONS -->
 <section>
   <div class="container">
     <div class="section-header">
-      <p class="eyebrow">My books</p>
-      <h2>Recent &amp; upcoming titles</h2>
+      <p class="eyebrow">系列文章</p>
+      <h2>从这里开始读</h2>
       <div class="section-divider"></div>
     </div>
 
     <div class="books-grid">
 
-      <!-- Book 1 -->
+      <!-- Series 1 -->
       <div class="book-card fade-in">
-        <!-- <img src="/assets/images/book1.jpg" alt="Book Title" class="book-cover" /> -->
-        <div class="book-cover-placeholder">Book Cover 1</div>
-        <p class="book-title">Your Book Title Here</p>
-        <p class="book-series">Series Name · Book 1</p>
-        <a href="/books/" class="read-more">Learn more</a>
+        <div class="book-cover-placeholder">语言</div>
+        <p class="book-title">是英文，也不是英文</p>
+        <p class="book-series">语言与表达系列 · 共4篇</p>
+        <a href="/blog/" class="read-more">开始阅读</a>
       </div>
 
-      <!-- Book 2 -->
+      <!-- Series 2 -->
       <div class="book-card fade-in">
-        <div class="book-cover-placeholder">Book Cover 2</div>
-        <p class="book-title">Another Great Title</p>
-        <p class="book-series">Series Name · Book 2</p>
-        <a href="/books/" class="read-more">Learn more</a>
+        <div class="book-cover-placeholder">文化</div>
+        <p class="book-title">一个国家的底色</p>
+        <p class="book-series">移民与身份系列 · 持续更新</p>
+        <a href="/blog/" class="read-more">开始阅读</a>
       </div>
 
-      <!-- Book 3 -->
+      <!-- Series 3 -->
       <div class="book-card fade-in">
-        <div class="book-cover-placeholder">Book Cover 3</div>
-        <p class="book-title">A Standalone Novel</p>
-        <p class="book-series">Standalone</p>
-        <a href="/books/" class="read-more">Learn more</a>
+        <div class="book-cover-placeholder">AI</div>
+        <p class="book-title">AI写完，Alice写</p>
+        <p class="book-series">表达力系列 · 即将推出</p>
+        <a href="/blog/" class="read-more">敬请期待</a>
       </div>
 
-      <!-- Book 4 -->
+      <!-- Series 4 -->
       <div class="book-card fade-in">
-        <div class="book-cover-placeholder">Book Cover 4</div>
-        <p class="book-title">Coming Soon</p>
-        <p class="book-series">New Release · 2025</p>
-        <a href="/books/" class="read-more">Learn more</a>
+        <div class="book-cover-placeholder">生活</div>
+        <p class="book-title">宁古塔的良好生活</p>
+        <p class="book-series">生活观察系列 · 持续更新</p>
+        <a href="/blog/" class="read-more">开始阅读</a>
       </div>
 
     </div>
 
     <div style="text-align:center; margin-top:3rem;">
-      <a href="/books/" class="btn">View all books</a>
+      <a href="/blog/" class="btn">看所有文章</a>
     </div>
   </div>
 </section>
@@ -128,83 +141,92 @@
 <section style="background: var(--warm-white); border-top: 1px solid var(--border);">
   <div class="container">
     <div class="section-header">
-      <p class="eyebrow">From the blog</p>
-      <h2>Recent posts</h2>
+      <p class="eyebrow">最新文章</p>
+      <h2>近期写了什么</h2>
       <div class="section-divider"></div>
     </div>
 
     <div class="posts-list content-narrow">
 
-      <!-- Post 1 — duplicate this block for each post -->
       <article class="post-card fade-in">
         <div class="post-date-col">
-          <span class="post-date">17</span>
-          <span class="post-month-year">Mar 2025</span>
+          <span class="post-date">25</span>
+          <span class="post-month-year">Apr 2025</span>
         </div>
         <div class="post-content-col">
-          <h3><a href="/blog/your-first-post/">Your First Blog Post Title</a></h3>
+          <h3><a href="/blog/canada-base-color/">一个国家的底色：狗种、宁古塔、良好生活与其他</a></h3>
           <p class="post-excerpt">
-            Write a sentence or two here that gives readers a taste of what this post is about.
-            Make it intriguing enough that they want to click through.
+            我们常常忘了我们所在的新国家有多么新。每年到了成为永居三周年的日子，我都会回顾一下自己在这个国家的生活——接受过的帮助，受过的不公，以及所能看到的未来。
           </p>
-          <a href="/blog/your-first-post/" class="read-more">Read more</a>
+          <a href="/blog/canada-base-color/" class="read-more">继续阅读</a>
         </div>
       </article>
 
-      <!-- Post 2 -->
       <article class="post-card fade-in">
         <div class="post-date-col">
-          <span class="post-date">02</span>
-          <span class="post-month-year">Feb 2025</span>
+          <span class="post-date">11</span>
+          <span class="post-month-year">May 2025</span>
         </div>
         <div class="post-content-col">
-          <h3><a href="/blog/second-post/">Another Post Title Goes Here</a></h3>
+          <h3><a href="/blog/english-4-questions/">英语中千头万绪的四大问，以及如何用英语自然地讲述自己的生命体验</a></h3>
           <p class="post-excerpt">
-            A short teaser for this blog post. Keep it to two or three sentences max
-            so readers aren't overwhelmed before they've clicked in.
+            What's new? What happened? What do you think? How did you get into this? 这四个问题，是最让非母语者千头万绪的。不是因为你不会英文，而是因为没有人告诉你这些问题真正在问什么。
           </p>
-          <a href="/blog/second-post/" class="read-more">Read more</a>
+          <a href="/blog/english-4-questions/" class="read-more">继续阅读</a>
+        </div>
+      </article>
+
+      <article class="post-card fade-in">
+        <div class="post-date-col">
+          <span class="post-date">04</span>
+          <span class="post-month-year">Apr 2025</span>
+        </div>
+        <div class="post-content-col">
+          <h3><a href="/blog/good-life-anchor/">左手是美股大跌，右手是AI不断取代人类员工，我们这一代人的良好生活该建立在什么之上？</a></h3>
+          <p class="post-excerpt">
+            伏尔泰说：每个人都应该培育自己的花园。良好生活必须要有一个锚。不是技巧，而是手艺与坚持。
+          </p>
+          <a href="/blog/good-life-anchor/" class="read-more">继续阅读</a>
         </div>
       </article>
 
     </div>
 
     <div style="text-align:center; margin-top:3rem;">
-      <a href="/blog/" class="btn">All posts</a>
+      <a href="/blog/" class="btn">所有文章</a>
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER + FOOTER -->
+<!-- NEWSLETTER -->
 <section class="newsletter-strip">
   <div class="container content-narrow">
-    <h2>Stay in the loop</h2>
-    <p>New posts, book news, and the occasional life update — straight to your inbox.</p>
+    <h2>保持联系</h2>
+    <p>新文章、新思考，不定期发到你的邮箱。不发广告，只发真正想说的话。</p>
     <form class="newsletter-form" aria-label="Newsletter signup" onsubmit="subscribeToBrevo(event, this)">
-  <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="Email address" required />
-  <input type="hidden" name="email_address_check" value="" />
-  <input type="hidden" name="locale" value="en" />
-  <button type="submit">Subscribe</button>
-</form>
+      <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="邮箱地址" required />
+      <input type="hidden" name="email_address_check" value="" />
+      <input type="hidden" name="locale" value="zh" />
+      <button type="submit">订阅</button>
+    </form>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container">
-    <p class="footer-name">[Your Name]</p>
+    <p class="footer-name">Alice 诚言</p>
     <nav class="footer-links">
-      <a href="/">Home</a>
-      <a href="/books/">Books</a>
-      <a href="/blog/">Blog</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
+      <a href="/">首页</a>
+      <a href="/blog/">文章</a>
+      <a href="/about/">关于</a>
+      <a href="/contact/">联系</a>
     </nav>
     <div class="footer-social">
       <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="Twitter">𝕏</a>
-      <a href="#" aria-label="Goodreads">GR</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="LinkedIn">in</a>
     </div>
-    <p class="footer-copy">&copy; <span id="year"></span> [Your Name]. All rights reserved.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Alice 诚言. All rights reserved.</p>
   </div>
 </footer>
 
