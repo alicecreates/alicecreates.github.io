@@ -1,197 +1,145 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About [Your Name]" />
-  <title>About — [Your Name]</title>
+  <meta name="description" content="关于 Alice 诚言 — 在北美生活的观察者与书写者" />
+  <title>关于我 — Alice 诚言</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
   <style>
-    .about-page-grid {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 6rem;
-      align-items: start;
+    body, p, li, td, th, input, button, textarea {
+      font-family: "Jost", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
-    .about-page-photo {
-      width: 100%;
-      box-shadow: 6px 10px 30px var(--shadow);
-      filter: sepia(8%);
+    h1, h2, h3, h4, h5, h6, blockquote {
+      font-family: "Cormorant Garamond", "LXGW WenKai", "Noto Serif SC", "STSong", serif;
     }
-    .about-page-photo-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(160deg, var(--blush), var(--border));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-style: italic;
-      color: var(--muted);
-      font-size: 1.1rem;
-      box-shadow: 6px 10px 30px var(--shadow);
-    }
-    .about-body {
-      font-family: var(--font-serif);
+    article p, article li {
+      font-family: "Cormorant Garamond", "LXGW WenKai", "Noto Serif SC", "STSong", serif;
       font-size: 1.2rem;
-      line-height: 1.8;
-      color: var(--soft-ink);
+      line-height: 1.9;
     }
-    .about-body p { margin-bottom: 1.5em; }
-    .about-body p:last-child { margin-bottom: 0; }
-    .about-sidebar {
-      position: sticky;
-      top: calc(var(--nav-height) + 2rem);
-    }
-    .sidebar-facts {
-      background: var(--warm-white);
-      border: 1px solid var(--border);
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    .sidebar-facts h4 {
-      font-family: var(--font-sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--dusty-rose);
-      margin-bottom: 1.2rem;
-    }
-    .fact-list li {
-      font-size: 0.9rem;
-      color: var(--soft-ink);
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 0.75rem;
-    }
-    .fact-list li:last-child { border-bottom: none; }
-    .fact-list li::before {
-      content: '—';
-      color: var(--blush);
-      flex-shrink: 0;
-    }
-    @media (max-width: 800px) {
-      .about-page-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-      .about-sidebar { position: static; }
+    .eyebrow, .nav-links a, .nav-logo, .btn, .read-more, .post-month-year, .footer-links a, .footer-copy, .footer-name {
+      font-family: "Jost", "Noto Sans SC", "PingFang SC", sans-serif;
     }
   </style>
+  <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">[Your Name]<span>.</span></a>
+    <a href="/" class="nav-logo">Alice 诚言<span>.</span></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" role="list">
-      <li><a href="/">Home</a></li>
-      <li><a href="/books/">Books</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/about/" class="active">About</a></li>
-      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/">首页</a></li>
+      <li><a href="/blog/">文章</a></li>
+      <li><a href="/about/" class="active">关于</a></li>
+      <li><a href="/contact/">联系</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="page-hero">
+<!-- ABOUT PAGE CONTENT -->
+<section style="padding: 5rem 0 3rem;">
   <div class="container">
-    <p class="eyebrow">Get to know me</p>
-    <h1>About</h1>
+    <p class="eyebrow">关于我</p>
+    <h1>Get to know me</h1>
+    <div class="section-divider"></div>
   </div>
-</div>
+</section>
 
 <section>
-  <div class="container">
-    <div class="about-page-grid">
+  <div class="container about-strip-inner" style="align-items: flex-start; gap: 4rem;">
 
-      <!-- MAIN TEXT -->
-      <div>
-        <div class="about-body">
-          <p>
-            [Start with a strong opening sentence. Something honest, warm, and a little bit specific.
-            Readers connect with writers who feel like real people, not polished PR bios.]
-          </p>
-          <p>
-            [Tell them where you're from, where you live, and what your days look like. Do you write
-            at a kitchen table with coffee going cold? In stolen hours between a day job and family?
-            These details make you memorable.]
-          </p>
-          <p>
-            [Talk about your writing. What draws you to the stories you tell? What themes keep showing
-            up no matter what you're working on? This is the heart of your author bio — the "why"
-            behind everything you create.]
-          </p>
-          <p>
-            [Add a paragraph about your life outside writing. A pet, a hobby, a city you love, a
-            show you're obsessed with. Something that gives readers a full picture of who you are
-            when you're not at the keyboard.]
-          </p>
-          <p>
-            [Optional: if you have representation, mention your agent here. If you have relevant
-            credentials (MFA, writing awards, publication history) this is a good place for those too.]
-          </p>
-        </div>
+    <div class="about-photo-placeholder" style="flex-shrink: 0;">
+      [ 照片 ]
+    </div>
 
-        <br><br>
-        <a href="/contact/" class="btn btn-rose">Get in touch</a>
-      </div>
+    <div class="about-text" style="max-width: 620px;">
 
-      <!-- SIDEBAR -->
-      <aside class="about-sidebar">
-        <!-- Replace with your photo: <img src="/assets/images/author-photo.jpg" alt="[Your Name]" class="about-page-photo" /> -->
-        <div class="about-page-photo-placeholder">[ Your photo ]</div>
+      <p style="font-size: 1.25rem; font-family: 'Cormorant Garamond', serif; font-style: italic; line-height: 1.7; margin-bottom: 2rem;">
+        我在杭州长大，在美国读书，现在住在加拿大。我没有选择出生的地方，但我选择了孩子出生的地方。
+      </p>
 
-        <div class="sidebar-facts">
-          <h4>Quick facts</h4>
-          <ul class="fact-list">
-            <li>Based in [Your City, Province]</li>
-            <li>Writing since [year]</li>
-            <li>[Genre] author</li>
-            <li>[Something fun about you]</li>
-            <li>[Another fun fact]</li>
-          </ul>
-        </div>
-      </aside>
+      <p>
+        我有八年的制片人和编剧经历，做过纪录片、剧集和企业视频。在这八年里，我学会了一件事：故事不是用来填充时间的，它是人与人之间唯一真正的连接方式。
+      </p>
+
+      <p>
+        来到加拿大之后，我开始真正思考语言这件事。不是词汇和语法，而是语言背后的世界——一个人能不能被一个新的地方接纳，很大程度上取决于她能不能用这个地方的语言讲出自己的故事。
+      </p>
+
+      <p>
+        这个观察让我开始写作。我用中文写，因为我想说的那些事，只有用中文才能说清楚——那些夹在两种文化之间、翻译不了却真实存在的经验。
+      </p>
+
+      <p>
+        我写语言，写文化，写在北美生活的观察，写AI时代里人类表达的价值。我的读者是和我一样在异乡生活的人，是对语言和文化有真实好奇心的人，是那些有时候觉得自己说的话没有被真正听见的人。
+      </p>
+
+      <p>
+        我的笔名"诚言"是我对自己写作的要求——诚实的表达，言之有物。不站队，但有态度。
+      </p>
+
+      <br />
+
+      <p class="eyebrow">一些关于我的事</p>
+      <ul style="list-style: none; padding: 0; margin-top: 1rem; line-height: 2.2;">
+        <li>📍 现居加拿大，计划搬去温哥华</li>
+        <li>🎬 八年制片人与编剧背景</li>
+        <li>📚 社会科学硕士，应用计算机科学第二学位在读</li>
+        <li>🌏 在杭州长大，在纽约读书，在加拿大安家</li>
+        <li>👧 一个2岁女儿的妈妈，她在认真学手语</li>
+        <li>🎙️ Acquired播客的忠实听众</li>
+        <li>🍜 韩餐、墨西哥菜、希腊菜的爱好者</li>
+      </ul>
+
+      <br />
+      <a href="/contact/" class="btn">联系我</a>
 
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER + FOOTER -->
-<section class="newsletter-strip">
+<!-- NEWSLETTER -->
+<section class="newsletter-strip" style="margin-top: 5rem;">
   <div class="container content-narrow">
-    <h2>Stay in the loop</h2>
-    <p>New posts, book news, and the occasional life update — straight to your inbox.</p>
-    <form class="newsletter-form" action="https://aa3a7867.sibforms.com/serve/MUIFAAdb4r7BJII3JZtu8kp5LrrTSEnjbkNHLIj62GyrC4yh9KfFYygytwLblxwjfFi4goqt9huH2MBRudF_dFDN5mQwphHMkcofWQChGuGg3Car3IQwoyMmMoCJB0jpYECLzA0DJ5tZSYlfoPDte1Rmv6FhTxkRIsgkELpyin7iR5_SjhG_XnTMRnrRArI5Eh8xqfynTlfBcvST-g==" aria-label="Newsletter signup">
-      <input type="email" placeholder="your@email.com" aria-label="Email address" required />
-      <button type="submit">Subscribe</button>
+    <h2>保持联系</h2>
+    <p>新文章、新思考，不定期发到你的邮箱。不发广告，只发真正想说的话。</p>
+    <form class="newsletter-form" aria-label="Newsletter signup" onsubmit="subscribeToBrevo(event, this)">
+      <input type="email" name="EMAIL" placeholder="your@email.com" aria-label="邮箱地址" required />
+      <input type="hidden" name="email_address_check" value="" />
+      <input type="hidden" name="locale" value="zh" />
+      <button type="submit">订阅</button>
     </form>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container">
-    <p class="footer-name">[Your Name]</p>
+    <p class="footer-name">Alice 诚言</p>
     <nav class="footer-links">
-      <a href="/">Home</a><a href="/books/">Books</a><a href="/blog/">Blog</a>
-      <a href="/about/">About</a><a href="/contact/">Contact</a>
+      <a href="/">首页</a>
+      <a href="/blog/">文章</a>
+      <a href="/about/">关于</a>
+      <a href="/contact/">联系</a>
     </nav>
     <div class="footer-social">
       <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="Twitter">𝕏</a>
-      <a href="#" aria-label="Goodreads">GR</a>
+      <a href="#" aria-label="YouTube">YT</a>
+      <a href="#" aria-label="LinkedIn">in</a>
     </div>
-    <p class="footer-copy">&copy; <span id="year"></span> [Your Name]. All rights reserved.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Alice 诚言. All rights reserved.</p>
   </div>
 </footer>
+
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="/assets/js/main.js"></script>
 </body>
